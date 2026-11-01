@@ -2,9 +2,9 @@
 
 Adaptive triggers for **Kingdom Come: Deliverance 1**, using a Sony DualSense controller and **DSX**. [中文说明](README.zh-CN.md)
 
-## Download and review status — 2026-11-01
+## Downloads and Nexus review
 
-The Windows 0.5.0 package on [Nexus Mods](https://www.nexusmods.com/kingdomcomedeliverance/mods/2448) is quarantined by automated safety checks. A manual review request has been submitted; the outcome is pending. At upload, [VirusTotal](https://www.virustotal.com/gui/file/ce9c009c0d64aa70fb939369209f94755ab10e8183247a453842991d57808a3d) reported 1/67 detections (Bkav Pro: `W32.Malware.74179FD`). A false positive has **not** been confirmed. The GitHub release provides the same Windows ZIP, unchanged; its availability here is not security approval. Please wait for review before installing, and do not bypass security warnings or disable security software.
+The Windows **0.5.0** main file has **completed Nexus Mods manual review** and is available from the [Nexus Files page](https://www.nexusmods.com/kingdomcomedeliverance/mods/2448?tab=files). You can also download it from [GitHub Releases](https://github.com/anverse01/kcd1-dualsense-dsx/releases/tag/v0.5.0). Both locations provide the same Windows ZIP; the package and published checksums are unchanged.
 
 Use **Releases** for the Windows package. GitHub's automatic **Source code** downloads contain source, not a ready-to-install game mod. The source and build instructions are public for inspection and independent builds. Published checksums identify the original uploaded artifacts; local rebuilds need not be byte-identical.
 

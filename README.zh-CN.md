@@ -2,9 +2,9 @@
 
 为《**天国：拯救 1**》加入 DualSense 自适应扳机反馈，需要运行 **DSX**。[English](README.md)
 
-## 下载与复核状态 — 2026-11-01
+## 下载与 Nexus 审核
 
-[Nexus Mods 页面](https://www.nexusmods.com/kingdomcomedeliverance/mods/2448)的 Windows 0.5.0 主文件目前被自动安全检查隔离，已提交人工复核，正在等待结果。上传时 [VirusTotal](https://www.virustotal.com/gui/file/ce9c009c0d64aa70fb939369209f94755ab10e8183247a453842991d57808a3d) 为 1/67 检出（Bkav Pro：`W32.Malware.74179FD`），**尚未确认属于误报**。GitHub Release 提供相同、未经修改的 Windows ZIP；在这里可下载不代表通过安全审核。建议等待复核后再安装，请勿绕过安全警告或关闭安全软件。
+Windows **0.5.0** 主文件已**通过 Nexus Mods 人工审核**，可在 [Nexus Files 页面](https://www.nexusmods.com/kingdomcomedeliverance/mods/2448?tab=files)正常下载，也可使用 [GitHub Release](https://github.com/anverse01/kcd1-dualsense-dsx/releases/tag/v0.5.0)。两处提供相同的 Windows ZIP，安装包及已发布校验值均未改动。
 
 玩家安装包位于 **Releases**。GitHub 自动生成的 **Source code** 下载是源码，不能直接当作游戏 Mod 安装。源码及构建步骤公开供审阅与自行构建；发布的校验值用于识别原始上传文件，自行重新构建不保证字节完全相同。
 
