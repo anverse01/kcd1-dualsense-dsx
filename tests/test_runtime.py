@@ -22,7 +22,8 @@ class RuntimeTests(unittest.TestCase):
             (game / "Bin/Win64/KingdomCome.exe").touch()
             location = game / "Mods/KCDDSX"
             location.mkdir(parents=True)
-            self.assertEqual(find_game(location), game)
+            # Windows runners may spell TEMP with an 8.3 user-directory alias.
+            self.assertEqual(find_game(location), game.resolve())
             state = Path(directory) / "settings"
             self.assertEqual(load_settings(state), {})
             expected = {"game_root": str(game), "port": 6969}
