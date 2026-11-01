@@ -21,7 +21,7 @@
 - 标签：根据实际可选项添加 English、Chinese 及相关手柄/界面标签。按 [Nexus 文件提交规则](https://help.nexusmods.com/article/28-file-submission-guidelines)，本项目的生成式 AI 代码/界面适用 AI-Generated Content；页面文案及计划使用的 ChatGPT 生成封面适用 AI Media。发布时按实际内容选择这些标签。
 - 封面：用户已提供 KCD1_DualSense_Adaptive_Triggers_Nexus_Cover_Side_Final.png，用作 Nexus 图库缩略图；不会写入运行所需的 PAK。
 
-独立 0.5.0 的本轮进游戏验证已完成，用户确认正常，结果见 docs/VALIDATION.md。Nexus 页面已发布于 https://www.nexusmods.com/kingdomcomedeliverance/mods/2448 ，已添加 AI-Generated Content 与 AI Media 标签。Windows 主文件 10522 被自动安全检查隔离，人工复核申请已提交，结果待定；源码文件 10523 可下载。页面顶部已添加中英文等待复核提醒。保留原始上传文件，勿以重新打包或更名规避隔离。
+独立 0.5.0 的本轮进游戏验证已完成，用户确认正常，结果见 docs/VALIDATION.md。Nexus 页面已发布于 https://www.nexusmods.com/kingdomcomedeliverance/mods/2448 ，已添加 AI-Generated Content 与 AI Media 标签。Windows 主文件 10522 已通过 Nexus 人工审核并恢复下载，源码文件 10523 也可下载。页面顶部已改为中英文审核通过及下载说明；原始安装包与校验值保持不变。
 
 ## GitHub
 
@@ -33,7 +33,7 @@
 
 建议 Topics：kingdom-come-deliverance, dualsense, dsx, adaptive-triggers, mod, lua, python。
 
-Actions 在推送和 PR 时运行测试。只有手动触发并勾选 build_windows 时才构建 Windows 包，产物保存在 workflow artifacts；不会自动公开发布。GitHub Release 可附原始 Windows ZIP 与 SHA256SUMS.txt，并必须同时说明 Nexus 隔离、人工复核待定和检测结果，不得将 GitHub 可下载表述为安全审核通过。GitHub 自动提供的源码下载与玩家安装包应明确区分。
+Actions 在推送和 PR 时运行测试。只有手动触发并勾选 build_windows 时才构建 Windows 包，产物保存在 workflow artifacts；不会自动公开发布。GitHub Release 已附原始 Windows ZIP、Source ZIP 与 SHA256SUMS.txt。发布说明应准确反映 Nexus 人工审核已通过的当前状态；不将审核结果扩大为对未来版本的承诺。GitHub 自动提供的源码下载与玩家安装包应明确区分。
 
 ## 发布前最后核对
 

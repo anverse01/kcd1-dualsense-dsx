@@ -1,7 +1,13 @@
-[size=5][b]Download notice / 下载提醒 — 2026-11-01[/b][/size]
-[b]Please wait before downloading or installing.[/b] The Windows 0.5.0 main file is currently quarantined by Nexus Mods' automated safety checks and is unavailable for download. A manual review request has been submitted; the outcome is pending. The cause has not been confirmed as a false positive. Please do not bypass security warnings or disable security software to run it. The optional Source Code archive is provided for inspection and building; it is not a ready-to-install game mod. This page will be updated when the review outcome is known.
+[size=5][b]Downloads and source / 下载与源码[/b][/size]
+[b]The Windows 0.5.0 main file has completed Nexus Mods manual review and is available for download.[/b]
+[b]Windows 0.5.0 主文件已通过 Nexus Mods 人工审核，现可正常下载。[/b]
 
-[b]请暂缓下载安装，等待复核结果。[/b] Windows 0.5.0 主文件目前被 Nexus Mods 自动安全检查隔离，暂时无法下载。已提交人工复核申请，正在等待结果，目前尚不能确认属于误报。请勿为运行此文件绕过安全警告或关闭安全软件。可选的 Source Code 文件仅供审阅和自行构建，不能直接当作游戏 Mod 安装。收到复核结果后将更新本页。
+[b][url=https://www.nexusmods.com/kingdomcomedeliverance/mods/2448?tab=files]Download on Nexus Mods / 在 Nexus Mods 下载[/url][/b]
+[url=https://github.com/anverse01/kcd1-dualsense-dsx/releases/tag/v0.5.0]GitHub Windows 0.5.0 download (includes EXE) / GitHub Windows 0.5.0 下载（含 EXE）[/url]
+[url=https://github.com/anverse01/kcd1-dualsense-dsx]Source code, instructions and credits / 项目源码、说明与致谢[/url]
+
+Choose the Windows main file on Nexus, or expand [b]Assets[/b] on the GitHub release page and choose [b]KCDDSX-0.5.0-Windows.zip[/b]. Source archives are for inspection/building and cannot be installed directly as a game mod.
+在 Nexus 的 Files 页面选择 Windows 主文件；也可在 GitHub 发布页展开 [b]Assets[/b]，选择 [b]KCDDSX-0.5.0-Windows.zip[/b]。源码归档供审阅与自行构建，不能直接作为游戏 Mod 安装。
 [line]
 
 [size=6][b]KCDDSX Adaptive Triggers / 自适应扳机[/b][/size]
@@ -32,7 +38,8 @@ Windows x64, KCD1, a DualSense controller, and [url=https://store.steampowered.c
 [*]If you use Mods/mod_order.txt, add KCDDSX as a line and keep your other entries.[/*]
 [*]Start DSX and enable Incoming UDP. Double-click Mods/KCDDSX/KCDDSXBridge.exe. It detects the game directory and starts automatically.[/*]
 [*]Keep the bridge window open, start the game and load a save.[/*]
-[/list]Manual installation is supported; Vortex deployment has not been tested.
+[/list]
+Manual installation is supported; Vortex deployment has not been tested.
 
 [size=4][b]Uninstall[/b][/size]
 Close the bridge to release effects and restore the DSX profile. Close the game, then remove Mods/KCDDSX and its optional mod_order.txt line. Optional preferences are in %LOCALAPPDATA%/KCDDSX/settings.json.
@@ -45,7 +52,8 @@ Close the bridge to release effects and restore the DSX profile. Close the game,
 [*]Only one adaptive-trigger writer should control this controller. Stop older prototype bridges.[/*]
 [*]KCD2, Bluetooth, DualSense Edge, other stores/versions and Vortex deployment are untested.[/*]
 [*]The EXE is unsigned; source and build instructions are included separately.[/*]
-[/list]The release does not replace graphics DLLs/configuration, DLSS or frame-generation files, key bindings or saves. It reads game state without altering stamina, inventory or combat balance. It includes no Cheat or extracted game assets. Network communication is limited to localhost DSX UDP.
+[/list]
+The release does not replace graphics DLLs/configuration, DLSS or frame-generation files, key bindings or saves. It reads game state without altering stamina, inventory or combat balance. It includes no Cheat or extracted game assets. Network communication is limited to localhost DSX UDP.
 
 [size=4][b]Troubleshooting[/b][/size]
 Waiting for game: load a save and check that the Mod is enabled and the game-root kcd.log is updating. DSX connection failure: check Incoming UDP, port, USB connection and controller index. Duplicate input: disable this game's Steam Input. See the included English/Chinese README for details.
@@ -80,7 +88,8 @@ Windows 64 位、《天国：拯救》一代、DualSense 手柄，以及 [url=ht
 [*]如果使用 Mods/mod_order.txt，在其中加入 KCDDSX 一行，并保留其他条目；没有这个文件则不必创建。[/*]
 [*]启动 DSX，开启传入 UDP，再双击 Mods/KCDDSX/KCDDSXBridge.exe。程序会自动识别游戏目录并开始桥接。[/*]
 [*]保持桥接窗口打开，启动游戏并进入存档。[/*]
-[/list]无需管理员权限或 -devmode。桥接窗口有 English / 中文切换按钮。手动拖放安装已验证，Vortex 部署尚未测试。
+[/list]
+无需管理员权限或 -devmode。桥接窗口有 English / 中文切换按钮。手动拖放安装已验证，Vortex 部署尚未测试。
 
 [size=4][b]更新与卸载[/b][/size]
 更新前退出游戏和桥接程序，只替换 Mods/KCDDSX 文件夹。
@@ -95,7 +104,8 @@ Windows 64 位、《天国：拯救》一代、DualSense 手柄，以及 [url=ht
 [*]同一手柄同时运行其他自适应扳机控制程序可能冲突；使用本版前请停止旧原型桥接。[/*]
 [*]二代、蓝牙连接、DualSense Edge、其他商店/游戏版本和 Vortex 部署尚未验证。[/*]
 [*]EXE 尚未签名，可使用单独提供的源码自行构建。[/*]
-[/list]本 Mod 不替换画质 DLL/配置、DLSS 或帧生成文件，不修改按键、存档、体力数值、物品和战斗平衡。公开包不包含 Cheat 或提取的游戏文件，网络通信只用于本机 DSX UDP。
+[/list]
+本 Mod 不替换画质 DLL/配置、DLSS 或帧生成文件，不修改按键、存档、体力数值、物品和战斗平衡。公开包不包含 Cheat 或提取的游戏文件，网络通信只用于本机 DSX UDP。
 
 [size=4][b]常见问题[/b][/size]
 [list]
@@ -103,7 +113,8 @@ Windows 64 位、《天国：拯救》一代、DualSense 手柄，以及 [url=ht
 [*]DSX 连接失败：检查传入 UDP、端口、USB 连接与手柄索引。[/*]
 [*]一次按键执行两次：关闭本游戏的 Steam 输入，检查是否运行其他手柄模拟软件。[/*]
 [*]体力很高时拳击、近战扳机很轻：这是预期效果，低于 80% 后才增加疲劳阻力。[/*]
-[/list]安装包内附中英文 README，包含更完整的排错、兼容性和源码说明。项目原创代码采用 MIT 许可，第三方运行库保留各自许可。这是社区非官方项目，与 Warhorse Studios、Sony 或 Paliverse 无隶属关系。
+[/list]
+安装包内附中英文 README，包含更完整的排错、兼容性和源码说明。项目原创代码采用 MIT 许可，第三方运行库保留各自许可。这是社区非官方项目，与 Warhorse Studios、Sony 或 Paliverse 无隶属关系。
 
 [line]
 [size=4][b]Credits and original authors / 致谢与原作者[/b][/size]
@@ -112,5 +123,6 @@ Windows 64 位、《天国：拯救》一代、DualSense 手柄，以及 [url=ht
 [*][url=https://github.com/pryans/kcd-cheat]pryans / KCD Cheat[/url] · [url=https://www.nexusmods.com/kingdomcomedeliverance/mods/106]Original Nexus page[/url] — private prototype loader and API/debugging reference. Release manifest: spraguep; current Nexus page credit: Othiden. The standalone release includes no Cheat files.[/*]
 [*][url=https://www.nexusmods.com/kingdomcomedeliverance/mods/1344]dataframe - benjaminfoo / How-to Lua[/url] · [url=https://github.com/benjaminfoo/KCD-Coding-Guide]KCD Coding Guide[/url] — startup and Lua scripting reference.[/*]
 [*][url=https://github.com/python/cpython]CPython contributors[/url], [url=https://github.com/tcltk]Tcl/Tk authors[/url], [url=https://github.com/pyinstaller/pyinstaller]PyInstaller contributors[/url], and [url=https://github.com/scoder/lupa]Stefan Behnel / Lupa contributors[/url] — runtime, build and development tests.[/*]
-[/list]Full links, roles and third-party license notices are preserved in CREDITS.md and THIRD_PARTY_NOTICES.md in both the player package and source archive.
+[/list]
+Full links, roles and third-party license notices are preserved in CREDITS.md and THIRD_PARTY_NOTICES.md in both the player package and source archive.
 原作者链接、各项目的实际用途及第三方许可声明，均保存在安装包和源码的 CREDITS.md 与 THIRD_PARTY_NOTICES.md 中。
