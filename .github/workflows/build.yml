@@ -1,0 +1,41 @@
+name: Test and build
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+    inputs:
+      build_windows:
+        description: Build the Windows package (unsigned; does not publish a release)
+        required: false
+        default: false
+        type: boolean
+permissions:
+  contents: read
+jobs:
+  windows:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+          cache-dependency-path: requirements-dev.txt
+      - run: python -m pip install -r requirements-dev.txt
+      - run: python -m unittest discover -s tests -v
+      - if: github.event_name == 'workflow_dispatch' && inputs.build_windows
+        run: python tools/build.py
+      - name: Test packaged executable
+        if: github.event_name == 'workflow_dispatch' && inputs.build_windows
+        shell: pwsh
+        run: |
+          $process = Start-Process -FilePath './dist/KCDDSX/KCDDSXBridge.exe' -ArgumentList '--self-test','--report',"$pwd/self-test.json" -Wait -PassThru
+          if ($process.ExitCode -ne 0) { throw 'Executable self-test failed' }
+          if ((Get-Content self-test.json -Raw | ConvertFrom-Json).self_test -ne 'passed') { throw 'Missing self-test result' }
+      - if: github.event_name == 'workflow_dispatch' && inputs.build_windows
+        uses: actions/upload-artifact@v4
+        with:
+          name: KCDDSX-release
+          path: |
+            dist/*.zip
+            dist/SHA256SUMS.txt
