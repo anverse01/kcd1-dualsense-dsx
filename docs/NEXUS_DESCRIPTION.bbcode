@@ -1,0 +1,116 @@
+[size=5][b]Download notice / 下载提醒 — 2026-11-01[/b][/size]
+[b]Please wait before downloading or installing.[/b] The Windows 0.5.0 main file is currently quarantined by Nexus Mods' automated safety checks and is unavailable for download. A manual review request has been submitted; the outcome is pending. The cause has not been confirmed as a false positive. Please do not bypass security warnings or disable security software to run it. The optional Source Code archive is provided for inspection and building; it is not a ready-to-install game mod. This page will be updated when the review outcome is known.
+
+[b]请暂缓下载安装，等待复核结果。[/b] Windows 0.5.0 主文件目前被 Nexus Mods 自动安全检查隔离，暂时无法下载。已提交人工复核申请，正在等待结果，目前尚不能确认属于误报。请勿为运行此文件绕过安全警告或关闭安全软件。可选的 Source Code 文件仅供审阅和自行构建，不能直接当作游戏 Mod 安装。收到复核结果后将更新本页。
+[line]
+
+[size=6][b]KCDDSX Adaptive Triggers / 自适应扳机[/b][/size]
+English first · 中文说明见下方
+
+[size=5][b]English[/b][/size]
+DualSense adaptive-trigger feedback for Kingdom Come: Deliverance 1, powered by DSX.
+
+[size=4][b]Features[/b][/size]
+[list]
+[*]Bow resistance is already present before you pull R2.[/*]
+[*]ReadyToFire increases resistance. Cancel or fire returns to the equipped-bow baseline.[/*]
+[*]Melee and empty hands: both L2 and R2 get progressively heavier as stamina falls below 80%.[/*]
+[*]Opening swings stay light; recovery reduces resistance.[/*]
+[*]Pause, dialogue and missing game telemetry release the effects.[/*]
+[*]Standalone Lua mod and portable English/Chinese bridge. No Cheat dependency or Python installation.[/*]
+[/list]
+[size=4][b]Requirements[/b][/size]
+Windows x64, KCD1, a DualSense controller, and [url=https://store.steampowered.com/app/1812620/DSX/]DSX[/url] with Incoming UDP enabled. Defaults: 127.0.0.1:6969, controller index 0. The standalone 0.5.0 package was tested with USB DualSense / Steam KCD1 1.9.7 / DSX 3.1.7. The player confirmed automatic loading, bow/cancel/fire, sword and empty-hand fatigue/recovery, and pause/resume working.
+
+[b]Disable Steam Input for this game when using DSX controller emulation[/b] to prevent duplicate input.
+
+[size=4][b]Install[/b][/size]
+[list=1]
+[*]Close the game and extract the Windows ZIP.[/*]
+[*]Drag KCDDSX into KingdomComeDeliverance/Mods.[/*]
+[*]The manifest must be at Mods/KCDDSX/mod.manifest, not inside another nested KCDDSX folder.[/*]
+[*]If you use Mods/mod_order.txt, add KCDDSX as a line and keep your other entries.[/*]
+[*]Start DSX and enable Incoming UDP. Double-click Mods/KCDDSX/KCDDSXBridge.exe. It detects the game directory and starts automatically.[/*]
+[*]Keep the bridge window open, start the game and load a save.[/*]
+[/list]Manual installation is supported; Vortex deployment has not been tested.
+
+[size=4][b]Uninstall[/b][/size]
+Close the bridge to release effects and restore the DSX profile. Close the game, then remove Mods/KCDDSX and its optional mod_order.txt line. Optional preferences are in %LOCALAPPDATA%/KCDDSX/settings.json.
+
+[size=4][b]Known limits[/b][/size]
+[list]
+[*]Bow feedback is based on discrete animation/action events, not continuous draw percentage.[/*]
+[*]Empty-hand fatigue also applies after walking/sprinting with low stamina; it is not limited to a persistent boxing stance.[/*]
+[*]Fatigue updates approximately every 500 ms. End-to-end latency has not been benchmarked.[/*]
+[*]Only one adaptive-trigger writer should control this controller. Stop older prototype bridges.[/*]
+[*]KCD2, Bluetooth, DualSense Edge, other stores/versions and Vortex deployment are untested.[/*]
+[*]The EXE is unsigned; source and build instructions are included separately.[/*]
+[/list]The release does not replace graphics DLLs/configuration, DLSS or frame-generation files, key bindings or saves. It reads game state without altering stamina, inventory or combat balance. It includes no Cheat or extracted game assets. Network communication is limited to localhost DSX UDP.
+
+[size=4][b]Troubleshooting[/b][/size]
+Waiting for game: load a save and check that the Mod is enabled and the game-root kcd.log is updating. DSX connection failure: check Incoming UDP, port, USB connection and controller index. Duplicate input: disable this game's Steam Input. See the included English/Chinese README for details.
+
+Original project code is MIT licensed; bundled runtimes retain their own licenses. Unofficial community project, not affiliated with Warhorse Studios, Sony or Paliverse.
+
+[line]
+[size=5][b]中文说明[/b][/size]
+通过 DSX 为《天国：拯救 1》加入 DualSense 自适应扳机反馈。
+
+[size=4][b]主要功能[/b][/size]
+[list]
+[*]只要拿着弓，R2 就有基础阻力，不必等开始拉弓后才变紧。[/*]
+[*]拉弓到 ReadyToFire 阶段后，R2 阻力进一步增强；取消拉弓或射出箭后，回到持弓基础阻力。[/*]
+[*]拔出近战武器或空手时，体力低于 80% 后，L2 和 R2 会随体力减少逐级变紧；体力恢复后变松。[/*]
+[*]前几下保持轻松：体力 80%–100% 时不加疲劳阻力，耗尽时最高 6/8。[/*]
+[*]暂停、对话或缺少游戏状态时释放扳机效果。[/*]
+[*]独立 Lua Mod，附中英文便携桥接程序，不要求安装 Cheat 或 Python。[/*]
+[/list]
+[size=4][b]运行要求与实测环境[/b][/size]
+Windows 64 位、《天国：拯救》一代、DualSense 手柄，以及 [url=https://store.steampowered.com/app/1812620/DSX/]DSX[/url]。在 DSX 中开启“传入 UDP”，默认地址 127.0.0.1、端口 6969、手柄索引 0。
+
+独立 0.5.0 已在 Steam 游戏版 1.9.7、DSX 3.1.7、USB 连接的 DualSense 上实测。用户确认自动加载、持弓阻力、拉弓取消/放箭、持剑与空拳体力反馈、恢复及暂停/继续均正常。
+
+[b]使用 DSX 模拟手柄时，请关闭本游戏的 Steam 输入，避免一次按键触发两次操作。[/b]
+
+[size=4][b]拖放安装[/b][/size]
+[list=1]
+[*]退出游戏，解压 Windows ZIP。[/*]
+[*]把里面的 KCDDSX 文件夹拖进 KingdomComeDeliverance/Mods。[/*]
+[*]确认路径是 Mods/KCDDSX/mod.manifest，避免多嵌套一层文件夹。[/*]
+[*]如果使用 Mods/mod_order.txt，在其中加入 KCDDSX 一行，并保留其他条目；没有这个文件则不必创建。[/*]
+[*]启动 DSX，开启传入 UDP，再双击 Mods/KCDDSX/KCDDSXBridge.exe。程序会自动识别游戏目录并开始桥接。[/*]
+[*]保持桥接窗口打开，启动游戏并进入存档。[/*]
+[/list]无需管理员权限或 -devmode。桥接窗口有 English / 中文切换按钮。手动拖放安装已验证，Vortex 部署尚未测试。
+
+[size=4][b]更新与卸载[/b][/size]
+更新前退出游戏和桥接程序，只替换 Mods/KCDDSX 文件夹。
+
+卸载时先关闭桥接窗口，程序会释放扳机并发送 DSX 配置还原指令。退出游戏后移除 Mods/KCDDSX；如果添加过 mod_order.txt 条目，也移除对应一行。可选的本机偏好设置保存在 %LOCALAPPDATA%/KCDDSX/settings.json。
+
+[size=4][b]效果细节与限制[/b][/size]
+[list]
+[*]弓箭按动作与动画事件分档，不是连续拉弓百分比。持弓时 R2 基础阻力为 3/8，ReadyToFire 后为 4/8；取消或放箭后保留 3/8。[/*]
+[*]空手疲劳也会在空手行走、冲刺后体力不足时生效，不限于拳击。独自挥拳时，游戏没有可靠的持续举拳标记。[/*]
+[*]体力反馈约每 500 毫秒更新；未正式测量端到端延迟。超过 2 秒没有新游戏状态时释放效果。[/*]
+[*]同一手柄同时运行其他自适应扳机控制程序可能冲突；使用本版前请停止旧原型桥接。[/*]
+[*]二代、蓝牙连接、DualSense Edge、其他商店/游戏版本和 Vortex 部署尚未验证。[/*]
+[*]EXE 尚未签名，可使用单独提供的源码自行构建。[/*]
+[/list]本 Mod 不替换画质 DLL/配置、DLSS 或帧生成文件，不修改按键、存档、体力数值、物品和战斗平衡。公开包不包含 Cheat 或提取的游戏文件，网络通信只用于本机 DSX UDP。
+
+[size=4][b]常见问题[/b][/size]
+[list]
+[*]桥接显示“等待游戏状态”：先进入存档，确认 Mod 启用且游戏根目录的 kcd.log 在更新。[/*]
+[*]DSX 连接失败：检查传入 UDP、端口、USB 连接与手柄索引。[/*]
+[*]一次按键执行两次：关闭本游戏的 Steam 输入，检查是否运行其他手柄模拟软件。[/*]
+[*]体力很高时拳击、近战扳机很轻：这是预期效果，低于 80% 后才增加疲劳阻力。[/*]
+[/list]安装包内附中英文 README，包含更完整的排错、兼容性和源码说明。项目原创代码采用 MIT 许可，第三方运行库保留各自许可。这是社区非官方项目，与 Warhorse Studios、Sony 或 Paliverse 无隶属关系。
+
+[line]
+[size=4][b]Credits and original authors / 致谢与原作者[/b][/size]
+[list]
+[*][url=https://github.com/Paliverse/DSX]Paliverse / DSX[/url] — required application and official UDP mod-system reference.[/*]
+[*][url=https://github.com/pryans/kcd-cheat]pryans / KCD Cheat[/url] · [url=https://www.nexusmods.com/kingdomcomedeliverance/mods/106]Original Nexus page[/url] — private prototype loader and API/debugging reference. Release manifest: spraguep; current Nexus page credit: Othiden. The standalone release includes no Cheat files.[/*]
+[*][url=https://www.nexusmods.com/kingdomcomedeliverance/mods/1344]dataframe - benjaminfoo / How-to Lua[/url] · [url=https://github.com/benjaminfoo/KCD-Coding-Guide]KCD Coding Guide[/url] — startup and Lua scripting reference.[/*]
+[*][url=https://github.com/python/cpython]CPython contributors[/url], [url=https://github.com/tcltk]Tcl/Tk authors[/url], [url=https://github.com/pyinstaller/pyinstaller]PyInstaller contributors[/url], and [url=https://github.com/scoder/lupa]Stefan Behnel / Lupa contributors[/url] — runtime, build and development tests.[/*]
+[/list]Full links, roles and third-party license notices are preserved in CREDITS.md and THIRD_PARTY_NOTICES.md in both the player package and source archive.
+原作者链接、各项目的实际用途及第三方许可声明，均保存在安装包和源码的 CREDITS.md 与 THIRD_PARTY_NOTICES.md 中。

@@ -1,0 +1,51 @@
+Game / 游戏
+Kingdom Come: Deliverance
+
+Title / 标题
+KCDDSX - DualSense Adaptive Triggers via DSX
+
+Summary / 双语简介
+DualSense bow resistance and stamina-based melee/unarmed triggers for KCD1 via DSX. / 通过 DSX 为《天国：拯救1》加入弓箭阻力与近战、空拳体力扳机反馈。
+
+Version / 版本
+0.5.0
+
+Description / 双语正文
+NEXUS_DESCRIPTION.bbcode
+English first, Chinese below, shared credits at the end.
+英文在前、中文在后，底部共用原作者致谢。粘贴后先检查预览排版。
+
+Main file / 主文件
+KCDDSX-0.5.0-Windows.zip
+
+Main file name / 主文件显示名
+KCDDSX 0.5.0 - Windows - English and Chinese
+
+Main file description / 主文件双语说明
+Drag KCDDSX into the game's Mods folder, start DSX, then run KCDDSXBridge.exe. Includes English/Chinese UI and documentation. Requires DSX; no Cheat or Python installation needed.
+将 KCDDSX 拖入游戏 Mods 文件夹，启动 DSX 后运行 KCDDSXBridge.exe。含中英文界面与说明，需要 DSX，无需安装 Cheat 或 Python。
+
+Optional source file / 可选源码文件
+KCDDSX-0.5.0-Source.zip
+
+Source file description / 源码文件说明
+Source code, tests, build tools, bilingual documentation and original-author credits. For developers; normal players only need the Windows main file.
+含源码、测试、构建工具、双语说明及原作者致谢，供开发者使用；普通玩家只需下载 Windows 主文件。
+
+External requirement / 外部前置
+DSX
+https://store.steampowered.com/app/1812620/DSX/
+
+Content tags / 内容标签
+English; Chinese; AI-Generated Content; AI Media
+Choose controller/interface tags only where applicable and offered by the site.
+手柄、界面等标签按网站实际提供的选项选择。
+
+Credits / 原作者与来源
+Keep the shared credits at the end of NEXUS_DESCRIPTION.bbcode and include CREDITS.md in distributed files.
+保留双语正文底部的原作者致谢，以及压缩包内 CREDITS.md。
+
+Cover / 封面
+KCD1_DualSense_Adaptive_Triggers_Nexus_Cover_Side_Final.png
+User-provided AI-generated cover. Upload as the gallery thumbnail; tag the page AI Media.
+用户提供的 AI 绘图封面，作为图库缩略图上传，页面添加 AI Media 标签。
